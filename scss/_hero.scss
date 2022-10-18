@@ -1,0 +1,113 @@
+.hero {
+  display: flex;
+  gap: 125px;
+  align-items: center;
+  padding-bottom: 40px;
+
+  &_content {
+    &_title {
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 87px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 50px;
+      color: #ffffff;
+    }
+
+    &_desc {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: #ffffff;
+      margin-bottom: 49px;
+    }
+    &_btn {
+      padding: 10px 47px;
+      background-color: $main_gold;
+      color: #fff;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 25px;
+      text-transform: uppercase;
+      border: none;
+    }
+  }
+
+  &_slider {
+    .first_slide {
+      position: relative;
+      top: 0;
+      z-index: 7;
+
+      .main_img {
+        position: relative;
+        z-index: 8;
+      }
+      .slide {
+        position: absolute;
+        top: 4%;
+        left: 20px;
+        img {
+          position: absolute;
+        }
+
+        .slide_child {
+          position: relative;
+        }
+
+        .slide_layout {
+          background: linear-gradient(
+            0deg,
+            rgba(209, 169, 84, 0.85),
+            rgba(209, 169, 84, 0.85)
+          );
+          width: 350px;
+          height: 490px;
+          position: absolute;
+          z-index: 2;
+        }
+      }
+    }
+
+    &_navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      &_back,
+      &_next {
+        display: flex;
+        gap: 10px;
+        p {
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 25px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #ffffff;
+        }
+      }
+
+      &_back {
+        p {
+          color: #c4c4c4;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $phone_width) {
+  .hero {
+    &_slider {
+      display: none;
+    }
+
+    &_content {
+      &_title {
+        font-size: 46px;
+        margin-bottom: 21px;
+      }
+    }
+  }
+}
